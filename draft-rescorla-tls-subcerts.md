@@ -1,12 +1,12 @@
 ---
 title: Delegated Credentials for TLS
-abbrev: 
+abbrev:
 docname: draft-rescorla-tls-subcerts-latest
 category: std
 
 ipr: trust200902
 area: Security
-workgroup: 
+workgroup:
 keyword: Internet-Draft
 
 stand_alone: yes
@@ -236,7 +236,7 @@ semantics that are needed for this application.
 ~~~~~~~~~~
 struct {
   uint32 validTime;
-  opaque publicKey<0..2^24-1>;
+  opaque publicKey<0..2^16-1>;
 } DelegatedCredentialParams;
 
 struct {

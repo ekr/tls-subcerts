@@ -125,10 +125,14 @@ delegated credentials associated with certificates without this extension.
 
 Credentials allow the server to terminate TLS connections on behalf of the
 certificate owner.  If a credential is stolen, there is no mechanism for revoking
-it without revoking the certificate itself.  To limit the exposure of a delegation
-credential compromise, servers MUST NOT issue credentials with a validity period
+it without revoking the certificate itself.
+
+In the absence of an application profile standard specifying otherwise:
+
+Servers MUST NOT issue credentials with a validity period
 longer than 7 days.  Clients MUST NOT accept credentials with longer validity
-periods.
+periods.  This restriction is intended to limit the exposure of a delegation
+credential compromise.
 
 ## Rationale
 
